@@ -14,11 +14,11 @@ FrontEndFileStructures uses a number of open source projects to work properly:
 * [Bourbon](https://www.google.com) - A simple and lightweight mixin library for Sass.
 * [SASS](http://sass-lang.com/) - CSS with superpowers.
 * [Font Awesome](http://fontawesome.io/) - The iconic font and CSS toolkit.
-* [node.js] - evented I/O for the backend.
+* [node.js](https://nodejs.org/en/) - evented I/O for the backend.
 * [NPM](https://www.npmjs.com/) - Build amazing things.
 * [Bower](https://bower.io/) - A package manager for the web.
-* [Gulp] - the streaming build system.
-* [jQuery] - Do more write less.
+* [Gulp](http://gulpjs.com/) - the streaming build system.
+* [jQuery](https://jquery.com/) - Do more write less.
 
 And of course this project itself is open source with a [FrontEndFileStructures](https://github.com/valeri879/FrontFileStrucutres)
  on GitHub.
