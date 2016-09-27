@@ -28,7 +28,7 @@ gulp.task('sass', function () {
 //////////////////////////////////////////////////////////////
 gulp.task('minify-css', function () {
     return gulp
-        .src('assets/css/source/style.css')
+        .src('assets/css/src/style.css')
         .pipe(minifyCSS({keepBreaks: false}))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('assets/css/build'))
@@ -37,10 +37,11 @@ gulp.task('minify-css', function () {
 // compress js
 //////////////////////////////////////////////////////////////
 gulp.task('compress-js', function () {
-    return gulp.src('templates/assets/js/src/*.js')
+    return gulp.src('assets/js/src/**/*.js')
         .pipe(gulpIgnore.exclude(false))
         .pipe(uglify())
-        .pipe(gulp.dest('js/build'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('assets/js/build'))
 });
 
 //////////////////////////////////////////////////////////////
@@ -48,7 +49,7 @@ gulp.task('compress-js', function () {
 //////////////////////////////////////////////////////////////
 gulp.task('watcher', function () {
     //sass
-    gulp.watch('templates/assets/sass/*.scss', ['sass']);
-    gulp.watch('templates/assets/css/src/*.css', ['minify-css']);
-    gulp.watch('js/src/*.js', ['compress-js']);
+    gulp.watch('assets/sass/*.scss',    ['sass']);
+    gulp.watch('assets/css/src/*.css',  ['minify-css']);
+    gulp.watch('assets/js/src/*.js',    ['compress-js']);
 });
