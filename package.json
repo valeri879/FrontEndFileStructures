@@ -1,0 +1,39 @@
+{
+  "name": "front-end-development-file-structures",
+  "version": "1.0.0",
+  "description": "�",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeri879/FrontFileStrucutres.git"
+  },
+  "keywords": [
+    "front",
+    "end",
+    "developmetn",
+    "file",
+    "structures"
+  ],
+  "author": "val kharitonashvili",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-ignore": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9"
+  },
+  "devDependencies": {
+    "gulp-htmlmin": "^2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/valeri879/FrontFileStrucutres/issues"
+  },
+  "homepage": "https://github.com/valeri879/FrontFileStrucutres#readme"
+}
