@@ -46,7 +46,7 @@ $ bower install
 ```
 ### Gulpfile.js Plugins
 
-Dillinger is currently extended with the following plugins
+FrontEndFileStructures is currently extended with the following plugins
 
 * gulp
 * gulp-sourcemaps
