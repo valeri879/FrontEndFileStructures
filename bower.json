@@ -1,22 +1,21 @@
 {
-  "name": "front-end-development-file-structures",
-  "description": "",
-  "main": "gulpfile.js",
-  "authors": [
-    "val kharitonashvili"
-  ],
-  "license": "ISC",
-  "homepage": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "bourbon": "^4.2.7",
-    "font-awesome": "fontawesome#^4.6.3",
-    "jquery": "^3.1.1"
-  }
+    "name": "front-end-file-structures",
+    "description": "",
+    "version": "1.0.0",
+    "main": "gulpfile.js",
+    "authors": [
+        "val kharitonashvili"
+    ],
+    "license": "ISC",
+    "homepage": "https://github.com/valeri879/FrontEndFileStructures",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+
+    }
 }
