@@ -25,6 +25,11 @@ And of course this project itself is open source with a [FrontEndFileStructures]
 
 ### Installation
 
+## Using Bower.io
+```sh
+$ bower install --save front-end-file-structures
+```
+
 This project requires [Node.js](https://nodejs.org/) v4+ to run.
 Download and extract the [latest pre-built release](https://github.com/valeri879/FrontFileStrucutres/archive/master.zip).
 
