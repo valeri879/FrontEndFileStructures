@@ -6,6 +6,15 @@ This project is basic template for front end developers, with perfect file struc
   - See HTML in the right
   - Magic
 
+```
+project
+  assets/
+         css/
+            /build
+            /src
+
+```
+
 
 ### Tech
 
