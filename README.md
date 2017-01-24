@@ -8,11 +8,21 @@ This project is basic template for front end developers, with perfect file struc
 
 ```
 project
+
   assets/
          css/
-            /build
-            /src
-
+            /build    (minified code)
+            /src      (source code)
+         fonts/       (fonts.ttf files)
+         js/
+           build/     (minified code)
+           src/       (source code)
+         sass/
+             libs/    (ex. bootstrap)
+             plugins/ (ex. slider)
+             vendors/ (ex. normalize.scss)
+             style.scss
+             
 ```
 
 
