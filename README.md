@@ -14,6 +14,7 @@ project
             /build    (minified code)
             /src      (source code)
          fonts/       (fonts.ttf files)
+         img/         (your images)
          js/
            build/     (minified code)
            src/       (source code)
