@@ -9,20 +9,33 @@ This project is basic template for front end developers, with perfect file struc
 ```
 project
 
-  assets/
-         css/
-            /build    (minified code)
-            /src      (source code)
-         fonts/       (fonts.ttf files)
-         img/         (your images)
-         js/
-           build/     (minified code)
-           src/       (source code)
-         sass/
-             libs/    (ex. bootstrap)
-             plugins/ (ex. slider)
-             vendors/ (ex. normalize.scss)
-             style.scss
+└───assets
+    ├───css
+    │   ├───build
+    │   └───src
+    ├───fonts
+    │   └───fontName
+    ├───img
+    ├───js
+    │   ├───build
+    │   │   ├───libs
+    │   │   ├───plugins
+    │   │   └───view
+    │   │       ├───about
+    │   │       ├───contact
+    │   │       └───main
+    │   └───src
+    │       ├───libs
+    │       ├───plugins
+    │       └───view
+    │           ├───about
+    │           ├───contact
+    │           └───main
+    └───sass
+        ├───fonts
+        ├───libs
+        ├───plugins
+        └───vendors
              
 ```
 
