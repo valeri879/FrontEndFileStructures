@@ -14,9 +14,9 @@ var gulp = require('gulp'),
 //////////////////////////////////////////////////////////////
 // sass
 //////////////////////////////////////////////////////////////
-gulp.task('sass', function () {
+gulp.task('sass', function() {
     return gulp
-        .src('assets/sass/*.scss')
+        .src('assets/sass/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
@@ -26,30 +26,30 @@ gulp.task('sass', function () {
 //////////////////////////////////////////////////////////////
 // minify css
 //////////////////////////////////////////////////////////////
-gulp.task('minify-css', function () {
+gulp.task('minify-css', function() {
     return gulp
-        .src('assets/css/src/style.css')
-        .pipe(minifyCSS({keepBreaks: false}))
-        .pipe(rename({suffix: '.min'}))
+        .src('assets/css/src/**/*.css')
+        .pipe(minifyCSS({ keepBreaks: false }))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('assets/css/build'))
 });
 //////////////////////////////////////////////////////////////
 // compress js
 //////////////////////////////////////////////////////////////
-gulp.task('compress-js', function () {
+gulp.task('compress-js', function() {
     return gulp.src('assets/js/src/**/*.js')
         .pipe(gulpIgnore.exclude(false))
         .pipe(uglify())
-        .pipe(rename({suffix: '.min'}))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('assets/js/build'))
 });
 
 //////////////////////////////////////////////////////////////
 // watcher
 //////////////////////////////////////////////////////////////
-gulp.task('watcher', function () {
+gulp.task('watcher', function() {
     //sass
-    gulp.watch('assets/sass/*.scss',    ['sass']);
-    gulp.watch('assets/css/src/*.css',  ['minify-css']);
-    gulp.watch('assets/js/src/*.js',    ['compress-js']);
+    gulp.watch('assets/sass/**/*.scss', ['sass']);
+    gulp.watch('assets/css/src/**/*.css', ['minify-css']);
+    gulp.watch('assets/js/src/**/*.js', ['compress-js']);
 });
