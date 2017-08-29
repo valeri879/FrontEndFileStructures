@@ -1,4 +1,47 @@
-@import "plugins/plugin"; //plugins scss files
-@import "fonts/fonts"; //fonts scss files
-@import "vendors/normalize"; //normalize scss files
-@import "vendors/variables"; //variables scss files
+/* ----------------------
+
+    mixins
+
+---------------------- */
+
+@import "mixins/mixin";
+
+/* ----------------------
+
+    libs && frameworks
+
+---------------------- */
+
+@import "components/mixin";
+
+/* ----------------------  
+ 
+    vendors
+    
+---------------------- */
+
+@import "vendors/vendors";
+
+/* ----------------------
+
+    fonts
+    
+---------------------- */
+
+@import "fonts/fonts";
+
+/* ----------------------
+
+    plugins
+    
+---------------------- */
+
+@import "plugins/plugins";
+
+/* ---------------------- 
+ 
+    components
+     
+---------------------- */
+
+@import "components/components";
