@@ -40,13 +40,33 @@ gulp.task('minify-css', function() {
 // compress js
 //////////////////////////////////////////////////////////////
 gulp.task('compress-js', function() {
-    return gulp.src('assets/js/src/**/*.js')
+    return gulp.src(['assets/js/src/**/*.js', '!assets/js/src/**/*.min.js', '!assets/js/src/libs/**/*.js'])
         .pipe(gulpIgnore.exclude(false))
-        .pipe(sourcemaps.write('sourcemaps'))
-        .pipe(uglify().on('error', gutil.log))
+        .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('assets/js/build'))
 });
+
+compressJs = function(obj){
+    function createErrorHandler(name) {
+        return function (err) {
+            console.error('Error from ' + name + ' in compress task', err.toString());
+        };
+    }
+    var src = obj.path;
+    var dest = obj.path.replace(/[^/\\]+$/, '').replace(/\\/g, '/').replace('/src/', '/build/'),startTime = (new Date).getTime();
+
+    gulp.src(src).on('error', createErrorHandler('gulp.src'))
+        .pipe(gulpIgnore.exclude(false))
+        .pipe(uglify()).on('error', createErrorHandler('uglify'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest(dest)).on('error', createErrorHandler('gulp.dest'))
+        .on('end', function(){
+            endTime = (new Date).getTime() - startTime;
+            console.log('Finished after ' + endTime + 'ms.');
+            console.log('File Saved in: ' + dest);
+        });
+}
 
 //////////////////////////////////////////////////////////////
 // watcher
