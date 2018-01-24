@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 gulp.task('sass', function() {
     return gulp
         .src('assets/sass/**/*.scss')
-        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write('../build/sourcemaps'))
         .pipe(gulp.dest('assets/css/src'))
@@ -31,9 +31,9 @@ gulp.task('minify-css', function() {
     return gulp
         .src('assets/css/src/**/*.css')
         .pipe(sourcemaps.init({ loadMaps: true }))
-        .pipe(minifyCSS({ keepBreaks: false }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(sourcemaps.write())
+        .pipe(minifyCSS({ keepBreaks: false }))
+        .pipe(sourcemaps.write('sourcemaps/'))
         .pipe(gulp.dest('assets/css/build'))
 });
 //////////////////////////////////////////////////////////////
